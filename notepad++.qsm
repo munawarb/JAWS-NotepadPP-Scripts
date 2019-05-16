@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LocalizableDefinitions File="notepad++.qs">
+	<DisplayNameDefinitions>
+		<DisplayName ID="NotepadPP" Text="Notepad++ Settings">
+			<HelpMsg>
+This group contains options for Notepad++.</HelpMsg>
+		</DisplayName>
+		<DisplayName ID="NotepadPP.AnnounceIndentation" Text="Announce Indentation (Notepad++ specific behavior)">
+			<HelpMsg>
+Select this checkbox to activate indentation announcement specific to Notepad++. When checked, JAWS will report the proper indent level on a line and override the default indent announcement behavior which tends to be inaccurate in Notepad++.</HelpMsg>
+		</DisplayName>
+	</DisplayNameDefinitions>
+</LocalizableDefinitions>

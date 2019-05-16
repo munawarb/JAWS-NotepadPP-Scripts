@@ -1,0 +1,20 @@
+:function announceTabs
+:Returns int TRUE
+:SearchRank 1
+
+:script QuickSettings
+:SearchRank 1
+
+:function isInTextEditor
+:Returns int True if custom indent behavior should be performed for next and prior line, false otherwise.
+:SearchRank 1
+:Synopsis Checks to see if we should override the next and prior line scripts
+:Description If this function returns true, the user wants the custom indentation behavior, focus is in the text editor, and the PC cursor is active.
+:Category Application
+
+:script SayPriorLine
+:SearchRank 1
+
+:script SayNextLine
+:SearchRank 1
+
