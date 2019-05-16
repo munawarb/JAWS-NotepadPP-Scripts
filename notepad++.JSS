@@ -1,14 +1,16 @@
+; Scripts for Notepad++
+; Written by Munawar Bijani
 include "hjconst.jsh";
 globals
 	string indentMSG;
-Int Function announceTabs () ;(string theScript, string theFrame)
+Int Function announceTabs ()
 	var
 		string msg,
 		int currentCharacter,
 		int numTabs,
 		int numSpaces;
 	; First, we'll use the invisible cursor to save the location of the PC Cursor.
-	; We need to do this in case executing priorLine or nextLine doesn't actually move the cursor.
+	; This is because we move the PC Cursor in order to get the indent count.
 	invisibleCursor();
 	routeInvisibleToPc ();
 	PCCursor();
@@ -65,12 +67,10 @@ EndFunction
 Script QuickSettings ()
 	var
 		int announceIndent;
-;	RemoveHook(HK_SCRIPT, "announceTabs");
 	PerformScript QuickSettings();
 	announceIndent = GetJCFOptionFromFile ("NonJCFOptions", "NotepadPPIndent");
 	if (announceIndent) then
 		SetJCFOption (OPT_INDICATE_INDENTATION, 0);
-;		AddHook (HK_SCRIPT, "announceTabs");
 	EndIf
 EndScript
 
